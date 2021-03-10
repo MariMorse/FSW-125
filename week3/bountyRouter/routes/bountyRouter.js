@@ -14,7 +14,7 @@ let hunter = {
 }
 
 
-applicationCache.use("/", require("./routes/bountyRouter.js"))
+applicationCache.use("/", require("./routes/bountyRouter.js.js"))
 
 
 
