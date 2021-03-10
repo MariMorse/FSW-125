@@ -4,29 +4,27 @@ const uuid = require("uuid/v4")
 
 
 
-let hunter = {
+let bounties = {
     firstName: "Lord Darth",
     lastName: "Sion",
-    living:  yes,
+    living:  true,
     bountyAmount: 35,
-    type: "Sith",
-     
+    type: "Sith"
+    
 }
 
-
-applicationCache.use("/", require("./routes/bountyRouter.js.js"))
-
-
-
-bountyRouter.get("/", req, res => {
-    res.send(bounties)
+bountyRouter.route("/")
+    .get((req, res) => {
+        res.send(bounties)
 })
 
-bountyRouter.post("/", (req, res) =>{
-    const newHunter = req.body
-    newHunter._id = uuid()
-    hunter.push(newHunter)
 
+bountyRouter.route("/")
+.post((req, res) => {
+    const newBounty = req.body
+    newBounty._id = uuidv4()
+    bounties.push(newBounty)
+    res.send(`You added ${newBounty.fName } to the database!`)
 })
 
 
