@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid')
 
 
 
-let bounties = {
+const bounties = {
     firstName: "Lord Darth",
     lastName: "Sion",
     living:  true,
