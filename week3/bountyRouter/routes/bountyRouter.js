@@ -1,6 +1,6 @@
 const express = require("express")
 const bountyRouter = express.Router()
-const uuid = require("uuid/v4")
+const { v4: uuidv4 } = require('uuid')
 
 
 
@@ -9,8 +9,8 @@ let bounties = {
     lastName: "Sion",
     living:  true,
     bountyAmount: 35,
-    type: "Sith"
-    
+    type: "Sith",
+    _id: uuidv4()
 }
 
 bountyRouter.route("/")
@@ -19,7 +19,6 @@ bountyRouter.route("/")
 })
 
 
-bountyRouter.route("/")
 .post((req, res) => {
     const newBounty = req.body
     newBounty._id = uuidv4()
