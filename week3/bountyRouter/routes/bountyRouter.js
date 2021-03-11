@@ -1,5 +1,5 @@
 const express = require("express")
-const bountyRouter = express.Router()
+const bountyrouter = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
 
@@ -13,7 +13,7 @@ const bounties = {
     _id: uuidv4()
 }
 
-bountyRouter.route("/")
+bountyrouter.route("/")
     .get((req, res) => {
         res.send(bounties)
 })
@@ -32,4 +32,4 @@ bountyRouter.route("/")
 
 
 
-module.exports = bountyRouter
+module.exports = bountyrouter
