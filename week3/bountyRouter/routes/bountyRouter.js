@@ -2,16 +2,14 @@ const express = require("express")
 const bountyrouter = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
+const bounties = [
+    {fName: "Lord Darth", lName: "Jaris", isAlive: true, number: 10, type: "Jedi", _id: uuidv4()},
+    {fName: "Raynar", lName: "Thul", isAlive: true, number: 20, type: "Jedi", _id: uuidv4()},
+    {fName: "Tenel", lName: "Ka", isAlive: true, number: 50, type: "Jedi", _id: uuidv4()},
+    {fName: "Anakin", lName: "Skywalker", isAlive: true, number: 100, type: "Jedi", _id: uuidv4()}
+]
 
 
-const bounties = {
-    firstName: "Lord Darth",
-    lastName: "Sion",
-    living:  true,
-    bountyAmount: 35,
-    type: "Sith",
-    _id: uuidv4()
-}
 
 bountyrouter.route("/")
     .get((req, res) => {
