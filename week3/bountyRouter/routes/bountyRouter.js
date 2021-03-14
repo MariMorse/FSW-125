@@ -1,5 +1,5 @@
 const express = require("express")
-const bountyrouter = express.Router()
+const bountyRouter = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
 const bounties = [
@@ -23,7 +23,7 @@ const bounties = [
 
 
 
-bountyrouter.route("/")
+bountyRouter.route("/")
     .get((req, res) => {
         res.send(bounties)
 })
@@ -37,19 +37,29 @@ bountyrouter.route("/")
 })
 
 
-bountyrouter.delete("/:bountyId", (req, res) =>{
+
+bountyRouter.route('/:bountyId')
+    .get((req, res) => {
     const bountyId = req.params.bountyId
-    const bountyIndex  = bounties.findIndex(bounties => bounties._id === bountyId)
-    bounties.splice(bountyIndex, 1)
-    res.send("This bounty was deleted")
-})
+    const foundBounty = bounties.find(bounty => bounty._id === bountyId)
+    res.send(foundBounty)
 
+})    
 
-bountyrouter.put("/:bountyId", (req, res) => {
+.put((req, res) => {
     const bountyId = req.params.bountyId
     const bountiesIndex = bounties.findIndex(bounties => bounties._id === bountyId)
-    const updatedBounty = Object.assign(bounties[bountiesIndex], req.body)
-    res.send(updatedBounty)
+    const updateBounty = Object.assign(bounties[bountiesIndex], req.body)
+    res.send(updateBounty)
+})
+    .delete((req, res) => {
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounties.findIndex(bounties => bounties._id === bountyId)    
+    bounties.splice(bountyIndex, 1)
+    res.send("You have deleted a bounty!!")
 })
 
-module.exports = bountyrouter
+
+
+
+module.exports = bountyRouter
