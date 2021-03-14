@@ -16,7 +16,9 @@ const bounties = [
     isAlive: true,
     number: 13,
     type: "Jedi",
-    _id: uuidv4()}
+    _id: uuidv4()},
+
+    
 ]
 
 
@@ -35,9 +37,19 @@ bountyrouter.route("/")
 })
 
 
+bountyrouter.delete("/:bountyId", (req, res) =>{
+    const bountyId = req.params.bountyId
+    const bountyIndex  = bounties.findIndex(bounties => bounties._id === bountyId)
+    bounties.splice(bountyIndex, 1)
+    res.send("This bounty was deleted")
+})
 
 
-
-
+bountyrouter.put("/bountyId", (req, res) => {
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounties.findIndex(bounties => bounties._id === bountyId)
+    const updatedBounty = Object.assign(bounties[bountyIndex], req.body)
+    res.send(updatedBounty)
+})
 
 module.exports = bountyrouter
