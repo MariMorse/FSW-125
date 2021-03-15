@@ -3,7 +3,7 @@ const app = express()
 
 
 app.use('/', express.json())
-app.use('todoItems', require('./routes/todoRouter'))
+app.use('/todoItems', require('./routes/todoRouter'))
 
 
 
