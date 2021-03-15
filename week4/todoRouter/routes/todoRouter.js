@@ -27,14 +27,14 @@ todoRouter.route("/")
         res.send(todoItems)
 })
 
-/*.post((req, res) => {
+.post((req, res) => {
     const newTodo = req.body
     newTodo._id = uuidv4()
     todoItems.push(newTodo)
     res.send(`You have added ${newBounty.name } to the list`)
 })
 
-todoRouter.route('/:todoId')
+/*todoRouter.route('/:todoId')
 .get((req, res) => {
 const todoId = req.params.todoId
 const foundTodo = todoItems.find(todo => todo._id === todoId)
