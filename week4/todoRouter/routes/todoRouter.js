@@ -22,7 +22,7 @@ const todoItems = [
 
 
 
-todoRouter.route("/")
+todorouter.route("/")
     .get((req, res) => {
         res.send(todoItems)
 })
@@ -62,4 +62,4 @@ res.send(foundTodo)
 
 
 
-module.exports = todoRouter
+module.exports = todorouter
