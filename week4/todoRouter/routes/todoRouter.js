@@ -20,20 +20,20 @@ const todoItems = [
 
 ]
 
-
+//GET All
 
 todoRouter.route("/")
     .get((req, res) => {
         res.send(todoItems)
 })
-
+//POST one
 .post((req, res) => {
     const newTodo = req.body
     newTodo._id = uuidv4()
     todoItems.push(newTodo)
     res.send(`You have added ${newTodo.name } to the list`)
 })
-
+//GET One
 todoRouter.route('/:todoId')
 .get((req, res) => {
 const todoId = req.params.todoId
