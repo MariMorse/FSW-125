@@ -1,5 +1,5 @@
 const express = require("express")
-const todorouter = express.Router()
+const todoRouter = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
 const todoItems = [
@@ -22,7 +22,7 @@ const todoItems = [
 
 
 
-todorouter.route("/")
+todoRouter.route("/")
     .get((req, res) => {
         res.send(todoItems)
 })
@@ -31,10 +31,10 @@ todorouter.route("/")
     const newTodo = req.body
     newTodo._id = uuidv4()
     todoItems.push(newTodo)
-    res.send(`You have added ${newBounty.name } to the list`)
+    res.send(`You have added ${newTodo.name } to the list`)
 })
 
-/*todoRouter.route('/:todoId')
+todoRouter.route('/:todoId')
 .get((req, res) => {
 const todoId = req.params.todoId
 const foundTodo = todoItems.find(todo => todo._id === todoId)
@@ -55,11 +55,11 @@ res.send(foundTodo)
     res.send("You deleted a todo!")
 })
 
-*/
 
 
 
 
 
 
-module.exports = todorouter
+
+module.exports = todoRouter
