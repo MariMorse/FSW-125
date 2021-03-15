@@ -3,7 +3,7 @@ const app = express()
 
 
 app.use(express.json())
-app.use('/bounties', require('./routes/bountyrouter'))
+app.use('/bounties', require('./routes/bountyRouter'))
 
 
 
