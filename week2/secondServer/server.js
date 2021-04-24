@@ -18,23 +18,23 @@ const books = [
 ]
 
 const countries = [
-    {name: "Germany"},
-    {name: "Eygpt"},
-    {name: "Italy"},
-    {name: "Ireland"}
+    { name: "Germany"},
+    { name: "Eygpt"},
+    { name: "Italy"},
+    { name: "Ireland"}
 
 ]
 
 app.get('/presidents', (req, res) => {
-    res.send(users);
+    res.send(presidents);
 });
 
 app.get('/books', (req, res) => {
-    res.send(cats);
+    res.send(books);
 });
 
 app.get('/countries', (req, res) => {
-    res.send(books);
+    res.send(countries);
 });
 
 app.listen(3000, () => {
