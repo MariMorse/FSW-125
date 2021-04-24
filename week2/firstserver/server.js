@@ -51,4 +51,4 @@ app.get("/historicalEvents", (req, res) => {
 
 app.listen(4000, () => {
     console.log("This is working")
-})
+});
