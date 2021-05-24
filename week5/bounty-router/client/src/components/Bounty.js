@@ -5,7 +5,7 @@ function Bounty(props) {
     const { first_name, last_name, living, bounty_amount, type, _id, deleteBounty } = props
     const [editToggle, setEditToggle] = useState(false)
 
-    function setToggle(toggle) { // workaround for issue with edit re-render
+    function setToggle(toggle) { 
         setEditToggle(toggle)
     }
 
@@ -41,7 +41,7 @@ function Bounty(props) {
                         _id={_id}
                         btnText='Save'
                         submit={props.editBounty}
-                        toggle={setToggle} // workaround for issue with edit re-render
+                        toggle={setToggle} 
                     />
                     <span className='btn-area'>
                         <button
