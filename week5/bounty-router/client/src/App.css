@@ -3,7 +3,7 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: black;
 }
 
 h1 {
@@ -20,15 +20,16 @@ p {
 }
 
 .bounty {
-  border: 1px solid #333;
+  background-color: #F7CAC9;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
 }
 
 form {
-  background-color: cornsilk;
-  border: 1px solid #333;
+  background-color: #F7CAC9;
+  border: 1px solid black;
   border-radius: 15px;
   padding: 10px;
   margin: 5px;
@@ -37,7 +38,7 @@ form {
 input {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #333;
+  border: 1px solid black;
   border-radius: 8px;
   margin: 5px;
 }
@@ -62,7 +63,7 @@ button {
 }
 
 .radio {
-  background-color: antiquewhite;
+  
   border-radius: 4px;
   padding: 10px;
 }
