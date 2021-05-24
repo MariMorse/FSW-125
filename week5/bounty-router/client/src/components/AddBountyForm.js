@@ -26,7 +26,7 @@ function AddBountyForm(props) {
         e.preventDefault()
         props.submit(inputs, props._id)
         setInputs(initInputs)
-        props.toggle(false) // workaround for issue with edit re-render
+        props.toggle(false) 
     }
 
     return (
