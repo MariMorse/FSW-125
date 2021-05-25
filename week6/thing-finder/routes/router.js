@@ -3,40 +3,40 @@ const router = express.Router()
 
 const items = [
     {
-        name: 'strwberry',
+        name: 'strawberry',
         type: 'fruit',
         color: 'red',
-        amount: 12
+        amount: .90
     },
     {
         name: 'kiwi',
         type: 'fruit',
         color: 'green',
-        amount: 7
+        amount: .99
     },
     {
         name: 'pineapple',
         type: 'fruit',
         color: 'yellow',
-        amount: 1
+        amount: .80
     },
     {
         name: 'brussel sprouts',
         type: 'vegetable',
         color: 'green',
-        amount: 25
+        amount: .60
     },
     {
         name: 'cauliflower',
         type: 'vegetable',
         color: 'white',
-        amount: 2
+        amount: .95
     },
     {
         name: 'tomato',
         type: 'fruit',
         color: 'red',
-        amount: 4
+        amount: .75
     }
 ]
 
