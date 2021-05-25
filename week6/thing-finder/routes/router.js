@@ -9,34 +9,34 @@ const items = [
         amount: .75
     },
     {
-        name: 'orange',
+        name: 'kiwi',
         type: 'fruit',
-        color: 'orange',
-        amount: .50
+        color: 'green',
+        amount: .99
     },
     {
-        name: 'apple',
+        name: 'pineapple',
+        type: 'fruit',
+        color: 'yellow',
+        amount: 1.99
+    },
+    {
+        name: 'brussel sprouts',
+        type: 'vegetable',
+        color: 'green',
+        amount: 2.00
+    },
+    {
+        name: 'cauliflower',
+        type: 'vegetable',
+        color: 'white',
+        amount: 2.50
+    },
+    {
+        name: 'tomato',
         type: 'fruit',
         color: 'red',
-        amount: .25
-    },
-    {
-        name: 'carrot',
-        type: 'vegetable',
-        color: 'orange',
-        amount: .20
-    },
-    {
-        name: 'cucumber',
-        type: 'vegetable',
-        color: 'green',
-        amount: .50
-    },
-    {
-        name: 'spanich',
-        type: 'vegetable',
-        color: 'green',
-        amount: .25
+        amount: 1.25
     }
 ]
 
@@ -71,5 +71,4 @@ router.route('/search/price')
         const filteredItems = items.filter(item => item.amount === Number(amount))
         res.send(filteredItems)
     })
-
 module.exports = router
