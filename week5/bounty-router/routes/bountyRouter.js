@@ -6,7 +6,7 @@ const bounties = [
     { 
         first_name: 'Asajj', 
         last_name: 'Ventress', 
-        living: true,
+        isAlive: true,
         bounty_amount: 50,
         type: 'Sith',
         _id: uuid() 
@@ -14,7 +14,7 @@ const bounties = [
     {
         first_name: 'Aurra',
         last_name: 'Sing',
-        living: true,
+        isAlive: true,
         bounty_amount: 80,
         type: 'Jedi',
         _id: uuid() 
