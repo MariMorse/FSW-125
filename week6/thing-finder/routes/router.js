@@ -6,37 +6,37 @@ const items = [
         name: 'strwberry',
         type: 'fruit',
         color: 'red',
-        amount: 4.99
+        amount: 12
     },
     {
         name: 'kiwi',
         type: 'fruit',
         color: 'green',
-        amount: .99
+        amount: 7
     },
     {
         name: 'pineapple',
         type: 'fruit',
         color: 'yellow',
-        amount: 1.99
+        amount: 1
     },
     {
         name: 'brussel sprouts',
         type: 'vegetable',
         color: 'green',
-        amount: 2.00
+        amount: 25
     },
     {
         name: 'cauliflower',
         type: 'vegetable',
         color: 'white',
-        amount: 2.50
+        amount: 2
     },
     {
         name: 'tomato',
         type: 'fruit',
         color: 'red',
-        amount: 1.25
+        amount: 4
     }
 ]
 
