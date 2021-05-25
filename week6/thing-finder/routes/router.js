@@ -3,10 +3,10 @@ const router = express.Router()
 
 const items = [
     {
-        name: 'bannana',
+        name: 'strwberry',
         type: 'fruit',
-        color: 'yellow',
-        amount: .75
+        color: 'red',
+        amount: 4.99
     },
     {
         name: 'kiwi',
