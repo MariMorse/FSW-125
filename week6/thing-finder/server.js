@@ -10,6 +10,6 @@ app.use(morgan('dev'))
 app.use('/items', require('./routes/router'))
 
 //Server Listen
-app.listen(9000, () => {
-    console.log('The server is listening on port 9000')
+app.listen(3000, () => {
+    console.log('The server is listening on port 3000')
 });
