@@ -1,74 +1,45 @@
 const express = require('express')
 const router = express.Router()
 
-const items = [
+const listItems = [
     {
-        name: 'strawberry',
-        type: 'fruit',
-        color: 'red',
-        amount: .90
+        name: 'milk',
+        type: 'food',
+        amount: .5
     },
     {
-        name: 'kiwi',
-        type: 'fruit',
-        color: 'green',
-        amount: .99
+        name: 'paper towels',
+        type: 'household',
+        amount: 3
     },
     {
-        name: 'pineapple',
-        type: 'fruit',
-        color: 'yellow',
-        amount: .80
+        name: 'wine',
+        type: 'food',
+        amount: 5
     },
     {
-        name: 'brussel sprouts',
-        type: 'vegetable',
-        color: 'green',
-        amount: .60
+        name: 'bleach',
+        type: 'household',
+        amount: 2
     },
     {
-        name: 'cauliflower',
-        type: 'vegetable',
-        color: 'white',
-        amount: .95
+        name: 'bread',
+        type: 'food',
+        amount: 1
     },
     {
-        name: 'tomato',
-        type: 'fruit',
-        color: 'red',
-        amount: .75
+        name: 'chocolate',
+        type: 'food',
+        amount: 6
     }
 ]
 
 router.route('/')
     .get((req, res) => {
-        res.send(items)
+        res.send(listItems)
     })
 
-router.route('/fruit')
+router.route('/food')
     .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'fruit')
-
-        if (req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
-        }
-        res.send(filteredItems)
+        
     })
-
-router.route('/vegetable')
-    .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'vegetable')
-
-        if (req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
-        }
-        res.send(filteredItems)
-    })
-
-router.route('/search/price')
-    .get((req, res) => {
-        const amount = req.query.amount
-        const filteredItems = items.filter(item => item.amount === Number(amount))
-        res.send(filteredItems)
-    })
-module.exports = router

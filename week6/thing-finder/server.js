@@ -1,13 +1,13 @@
 const express = require('express')
 const morgan = require('morgan')
-const app = express()
+const app = express();
 
 //Middleware
 app.use('/', express.json())
-app.use(morgan('dev'))
+app.use(morgan('dev'));
 
 //Routes
-app.use('/items', require('./routes/router'))
+app.use('/listItems', require('./routes/router'))
 
 //Server Listen
 app.listen(3000, () => {
