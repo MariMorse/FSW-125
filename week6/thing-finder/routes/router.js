@@ -65,4 +65,10 @@ router.route('/herb')
         res.send(filteredItems)
     })
 
-router.route
+router.route('/search/price')
+    .get((req, res)=> {
+        const amount = req.query.amount
+        const filteredItems = items.filter(item => item.amount === Number(amount))
+    })
+
+module.exports = router
