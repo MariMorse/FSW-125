@@ -56,4 +56,13 @@ router.route('/flower')
     })
 
 router.route('/herb')
-    .get()
+    .get((req, res) => {
+        let filteredItems = items.filter(item => item.type === 'herb')
+
+        if(req.query.color !== undefined) {
+            filteredItems = filteredItems.filter(item => item.color === req.query.color)
+        }
+        res.send(filteredItems)
+    })
+
+router.route
