@@ -1,45 +1,59 @@
 const express = require('express')
 const router = express.Router()
 
-const listItems = [
+const plants = [
     {
-        name: 'milk',
-        type: 'food',
-        amount: .5
+        name: 'rose',
+        type: 'flower',
+        color: 'yellow',
+        amount: 12.99
     },
     {
-        name: 'paper towels',
-        type: 'household',
-        amount: 3
+        name: 'lavender',
+        type: 'herb',
+        color: 'violet',
+        amount: 4.75
     },
     {
-        name: 'wine',
-        type: 'food',
-        amount: 5
+        name: 'daisies',
+        type: 'flower',
+        color: 'blue',
+        amount: 2.50
     },
     {
-        name: 'bleach',
-        type: 'household',
-        amount: 2
+        name: 'buttonbush',
+        type: 'flower',
+        color: 'white',
+        amount: 5.00
     },
     {
-        name: 'bread',
-        type: 'food',
-        amount: 1
+        name: 'sage',
+        type: 'herb',
+        color: 'green',
+        amount: 3.15
     },
     {
-        name: 'chocolate',
-        type: 'food',
-        amount: 6
+        name: 'garlic',
+        type: 'herb',
+        color: 'white',
+        amount: .75
     }
 ]
 
 router.route('/')
     .get((req, res) => {
-        res.send(listItems)
+        res.send(plants)
+    })// Get All
+
+router.route('/flower')
+    .get((req, res) => {
+        let filteredItems = items.filter(item => item.type === 'flower')
+
+        if(req.query.color !== undefined) {
+            filteredItems = filteredItems.filter(item => item.color === req.query.color)
+        }
+        res.send(filteredItems)
     })
 
-router.route('/food')
-    .get((req, res) => {
-        
-    })
+router.route('/herb')
+    .get()
