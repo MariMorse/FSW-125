@@ -7,7 +7,7 @@ app.use('/', express.json())
 app.use(morgan('dev'));
 
 //Routes
-app.use('/listItems', require('./routes/router'))
+app.use('/plants', require('./routes/router'))
 
 //Server Listen
 app.listen(3000, () => {
