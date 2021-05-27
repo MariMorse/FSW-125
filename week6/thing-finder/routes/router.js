@@ -47,20 +47,20 @@ router.route('/')
 
 router.route('/flower')
     .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'flower')
+        let filteredItems = plants.filter(plant => plant.type === 'flower')
 
         if(req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
+            filteredItems = filteredItems.filter(plant => plant.color === req.query.color)
         }
         res.send(filteredItems)
     })
 
 router.route('/herb')
     .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'herb')
+        let filteredItems = plants.filter(plant => plant.type === 'herb')
 
         if(req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
+            filteredItems = filteredItems.filter(plant => plant.color === req.query.color)
         }
         res.send(filteredItems)
     })
@@ -68,7 +68,7 @@ router.route('/herb')
 router.route('/search/price')
     .get((req, res)=> {
         const amount = req.query.amount
-        const filteredItems = items.filter(item => item.amount === Number(amount))
+        const filteredItems = plants.filter(plant => plant.amount === Number(amount))
     })
 
 module.exports = router
