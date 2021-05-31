@@ -41,15 +41,14 @@ const plants = [
     }
 ]
 
-thingFinder.get('/', (req, res) => {
+thingFinder.route("/").get((req,res) => {
     res.send(plants)
-});
-
-thingFinder.get('search/type', (req, res) => {
-    const type = req.query.type
-    const filteredPlants = filteredPlants.filter(items => items.type === type)
-    res.status(200).send(filteredPlants)
 })
 
+thingFinder.route("/search/type").get((req, res) => {
+    const type = req.query.type
+    const filteredPlants = plants.filter(plant => plant.type === type)
+    res.send(filteredPlants)
+})
 
 module.exports = thingFinder
