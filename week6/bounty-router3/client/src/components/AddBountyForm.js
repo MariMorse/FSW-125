@@ -34,7 +34,7 @@ function AddBountyForm(props) {
     if (props.showCancel) {
         cancelBtn = <button
             type='button'
-            className='blue-btn'
+            className='filter-btn'
             onClick={() => props.toggle(false)}>
                 Cancel
             </button>
@@ -99,7 +99,7 @@ function AddBountyForm(props) {
                     onChange={handleChange_living} />
             </div>
             <div className='btn-area'>
-                <button className='blue-btn'>{props.btnText}</button>
+                <button className='filter-btn'>{props.btnText}</button>
                 {cancelBtn}
             </div>
         </form>

@@ -5,6 +5,10 @@ import Bounty from './components/Bounty'
 import AddBountyForm from './components/AddBountyForm'
 
 function App() {
+
+
+
+
     const [bounties, setBounties] = useState([])
 
     const [filterValue, setFilterValue] = useState()
@@ -74,6 +78,7 @@ function App() {
     
     return (
         <div className='bounty-container'>
+            <h1 className="main_header">Bounty Hunter Router</h1>
             <AddBountyForm
                 submit={addBounty}
                 btnText={'Add Bounty'}
