@@ -2,7 +2,7 @@
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: black;
 }
 
 body {
@@ -40,7 +40,7 @@ p {
 
 form {
     background-color: rgb(238, 125, 187);
-    border: 1px solid #333;
+    border: 1px solid black;
     padding: 5px;
     border-radius: 20px;
 }
