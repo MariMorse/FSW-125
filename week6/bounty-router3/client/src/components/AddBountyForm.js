@@ -41,6 +41,7 @@ function AddBountyForm(props) {
     }
 
     return (
+
         <form onSubmit={handleSubmit}>
             <input
                 type='text'

@@ -14,7 +14,7 @@ function Bounty(props) {
             { !editToggle ?
                 <>
                     <h3>{`${first_name} ${last_name}`}</h3>
-                    <p>Bounty Amount: {bounty_amount}</p>
+                    <p>Bounty Price: {bounty_amount}</p>
                     <p>Title: {type}</p>
                     <p>Living: {living === true ? 'Yes' : 'No'}</p>
                     <span className='btn-area'>
@@ -36,7 +36,7 @@ function Bounty(props) {
                         first_name={first_name}
                         last_name={last_name}
                         living={living}
-                        bounty_amount={bounty_amount}
+                        bounty_price={bounty_amount}
                         type={type}
                         _id={_id}
                         btnText='Save'
