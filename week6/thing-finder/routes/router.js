@@ -1,75 +1,61 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router();
+const { v4: uuidv4 } = require('uuid');
 
 const items = [
     {
-        name: 'kiwi',
-        type: 'fruit',
-        color: 'green',
-        amount: 1.75
-    },
-    {
-        name: 'pineapple',
-        type: 'fruit',
+        name: 'rose',
+        type: 'flower',
         color: 'yellow',
-        amount: 3.50
+        price: 20,
+        _id: uuidv4()
     },
     {
-        name: 'grapes',
-        type: 'fruit',
+        name: 'lavender',
+        type: 'herb',
         color: 'purple',
-        amount: 2.99
+        price: 12,
+        _id: uuidv4()
     },
     {
-        name: 'brussel sprouts',
-        type: 'vegetable',
+        name: 'daisies',
+        type: 'flower',
+        color: 'pink',
+        price: 2,
+        _id: uuidv4()
+    },
+    {
+        name: 'buttonbush',
+        type: 'flower',
+        color: 'white',
+        price: 5,
+        _id: uuidv4()
+    },
+    {
+        name: 'sage',
+        type: 'herb',
         color: 'green',
-        amount: .50
+        price: 3,
+        _id: uuidv4()
     },
     {
-        name: 'squash',
-        type: 'vegetable',
-        color: 'orange',
-        amount: 1.50
-    },
-    {
-        name: 'tomato',
-        type: 'vegetable',
-        color: 'red',
-        amount: 2.25
+        name: 'garlic',
+        type: 'herb',
+        color: 'white',
+        price: .75,
+        _id: uuidv4()
     }
 ]
+router.route("/")
+    .get((req,res) => {
+    res.send(items)
+})
 
-router.route('/')
+router.route("/search/type")
     .get((req, res) => {
-        res.send(items)
-    })
-
-router.route('/fruit')
-    .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'fruit')
-
-        if (req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
-        }
+        let type = req.query.type
+        console.log(type)
+        let filteredItems = items.filter(item => item.type === type)
         res.send(filteredItems)
-    })
-
-router.route('/vegetable')
-    .get((req, res) => {
-        let filteredItems = items.filter(item => item.type === 'vegetable')
-
-        if (req.query.color !== undefined) {
-            filteredItems = filteredItems.filter(item => item.color === req.query.color)
-        }
-        res.send(filteredItems)
-    })
-
-router.route('/search/price')
-    .get((req, res) => {
-        const amount = req.query.amount
-        const filteredItems = items.filter(item => item.amount === Number(amount))
-        res.send(filteredItems)
-    })
-
+})
 module.exports = router
