@@ -15,8 +15,8 @@ function Bounty(props) {
                 <>
                     <h1>{`Name: ${first_name} ${last_name}`}</h1>
                     <p>Living: {living === true ? 'Yes' : 'No'}</p>
-                    <p>Bounty Amount: {bounty_amount}</p>
-                    <p>Type: {type}</p>
+                    <p>Bounty Price: {bounty_amount}</p>
+                    <p>Title: {type}</p>
                     <span className='btn-area'>
                         <button
                             className='btn'
