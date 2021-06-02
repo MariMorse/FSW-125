@@ -61,7 +61,7 @@ function AddBountyForm(props) {
                 name='bounty_amount'
                 value={inputs.bounty_amount}
                 onChange={handleChange}
-                placeholder='Bounty Amount' />
+                placeholder='Bounty Price' />
             <div className='radio'>
                 <label>Sith</label>
                 <input

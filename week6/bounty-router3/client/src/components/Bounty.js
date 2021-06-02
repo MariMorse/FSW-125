@@ -15,16 +15,16 @@ function Bounty(props) {
                 <>
                     <h3>{`${first_name} ${last_name}`}</h3>
                     <p>Bounty Amount: {bounty_amount}</p>
-                    <p>Type: {type}</p>
+                    <p>Title: {type}</p>
                     <p>Living: {living === true ? 'Yes' : 'No'}</p>
                     <span className='btn-area'>
                         <button
-                            className='blue-btn'
+                            className='filter-btn'
                             onClick={() => deleteBounty(_id)}>
                                 Delete
                         </button>
                         <button
-                            className='blue-btn'
+                            className='filter-btn'
                             onClick={() => setEditToggle(prevToggle => !prevToggle)}>
                                 Edit
                         </button>
