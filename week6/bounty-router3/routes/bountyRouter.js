@@ -4,27 +4,27 @@ const { v4: uuid } = require('uuid')
 
 const bounties = [
     { 
-        first_name: 'Darth', 
-        last_name: 'Millenial', 
+        first_name: 'Asajj', 
+        last_name: 'Ventress', 
         living: true,
         bounty_amount: 50,
         type: 'Sith',
         _id: uuid() 
     },
     {
-        first_name: 'Ahsoka',
-        last_name: 'Tano',
+        first_name: 'Aurra',
+        last_name: 'Sing',
         living: true,
         bounty_amount: 80,
         type: 'Jedi',
         _id: uuid() 
     },
     {
-        first_name: 'Jacen',
-        last_name: 'Solo',
+        first_name: 'Duane',
+        last_name: 'Chapman',
         living: true,
         bounty_amount: 30,
-        type: 'Sith',
+        type: 'Jedi',
         _id: uuid() 
     }
 ]
